@@ -1,4 +1,4 @@
-CheckVersion("0.4")
+CheckVersion("0.5")
 
 target_family = os.getenv("TARGET_FAMILY")
 if target_family then
@@ -75,7 +75,6 @@ function DuplicateDirectoryStructure(orgpath, srcpath, dstpath)
 		DuplicateDirectoryStructure(orgpath, v, dstpath)
 	end
 end
-
 DuplicateDirectoryStructure("src", "src", "objs")
 ]]
 

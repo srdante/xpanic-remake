@@ -62,7 +62,6 @@ void CLifeHearth::Tick()
 				GameServer()->m_World.DestroyEntity(this);
 				return;
 			}
-			Lefpos = pOwner->GetCharacter()->m_ActivTurs : vec2(0.0f, 0.0f);	
 		}				
 		m_Pos += Lefpos * 8;
 	}
