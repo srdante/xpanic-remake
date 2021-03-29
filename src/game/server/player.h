@@ -49,6 +49,7 @@ public:
 	int m_aActLatency[MAX_CLIENTS];
 	int m_SpectatorID;
 	bool m_IsReady;
+	bool m_LifeActives;
 
 	struct
 	{

@@ -210,7 +210,7 @@ void CTurret::Fire()
 						GameServer()->CreateSound(m_Pos1L, 6);
 						GameServer()->CreateExplosion(m_Pos2L, m_Owner, WEAPON_GRENADE, true, -1, -1);
 						GameServer()->CreateSound(m_Pos2L, 6);
-						// GameServer()->m_apPlayers[pClosest->m_Owner]->m_LifeActives = false;
+						GameServer()->m_apPlayers[pClosest->m_Owner]->m_LifeActives = false;
 						pClosest->Reset();
 						Reset();
 					}
