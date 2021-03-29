@@ -58,10 +58,10 @@ void CTurret::Reset()
 
 	if (GameServer()->GetPlayerChar(m_Owner))
 	{
-		if (m_Type == WEAPON_GUN)
-			GameServer()->GetPlayerChar(m_Owner)->m_TurretActive[0] = false;
-		else if (m_Type == WEAPON_SHOTGUN)
-			GameServer()->GetPlayerChar(m_Owner)->m_TurretActive[1] = false;
+		// if (m_Type == WEAPON_GUN)
+		// 	GameServer()->GetPlayerChar(m_Owner)->m_TurretActive[0] = false;
+		// else if (m_Type == WEAPON_SHOTGUN)
+		// 	GameServer()->GetPlayerChar(m_Owner)->m_TurretActive[1] = false;
 	}
 }
 
