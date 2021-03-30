@@ -502,7 +502,17 @@ void CCmd::ChatCmd(CNetMsg_Cl_Say *Msg)
 	else if(!strcmp(Msg->m_pMessage, "/tutorial"))
 	{
 		LastChat();
-		GameServer()->SendChatTarget(m_pPlayer->GetCID(), g_Config.m_SvTutorialText);
+		GameServer()->SendChatTarget(m_pPlayer->GetCID(), "----------------------------------------------");
+		GameServer()->SendChatTarget(m_pPlayer->GetCID(), "                    Tutorial                  ");
+		GameServer()->SendChatTarget(m_pPlayer->GetCID(), "----------------------------------------------");
+		GameServer()->SendChatTarget(m_pPlayer->GetCID(), g_Config.m_SvTutorialZombie);
+		GameServer()->SendChatTarget(m_pPlayer->GetCID(), "----------------------------------------------");
+		GameServer()->SendChatTarget(m_pPlayer->GetCID(), g_Config.m_SvTutorialPlayer);
+		GameServer()->SendChatTarget(m_pPlayer->GetCID(), "----------------------------------------------");
+		if(g_Config.m_SvTutorialExtra != "") {
+			GameServer()->SendChatTarget(m_pPlayer->GetCID(), g_Config.m_SvTutorialExtra);
+		    GameServer()->SendChatTarget(m_pPlayer->GetCID(), "----------------------------------------------");
+		}
 		return;
 	}
 	else if (!strcmp(Msg->m_pMessage, "/heart"))
