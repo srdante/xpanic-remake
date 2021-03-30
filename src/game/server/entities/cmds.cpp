@@ -499,6 +499,12 @@ void CCmd::ChatCmd(CNetMsg_Cl_Say *Msg)
 		GameServer()->SendChatTarget(m_pPlayer->GetCID(), "rule 10 everyone who use bugs (freeze + ban)");
 		return;
 	}
+	else if(!strcmp(Msg->m_pMessage, "/tutorial"))
+	{
+		LastChat();
+		GameServer()->SendChatTarget(m_pPlayer->GetCID(), g_Config.m_SvTutorialText);
+		return;
+	}
 	else if (!strcmp(Msg->m_pMessage, "/heart"))
 	{
 		LastChat();
